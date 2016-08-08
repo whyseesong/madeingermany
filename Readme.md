@@ -42,31 +42,44 @@ $ python manage.py runserver
 + index
 
 load mainpage/index.html file and show user details. you can see user lists of name and user grade.
+	
 	1. click user name : jump to **user_detail**
+
 	2. click new user : jump to **write_user**
+	
 	3. click delete user : jump to **delete_user**
 
 + user_detail
 
 load mainpage/user_detail.html file. this page shows you user details(user name, user grade), and details of devices which current user have. device details include device name, ip address, is attestated, and attestated time.
+	
 	1. click new device : jump to **write_device**
+	
 	2. click delete device : jump to **delete_device**
+	
 	3. click modify user : jump to **modify_data**
+	
 	4. click modify device(*if device exists*) : jump to modify_device_check
+	
 	5. click back : return to **index**
 
 + write_device
 
 asdfasdf
 	1. 
+	
 	2. 
+	
 	3. 
 
 + write_user
 
 load mainpage/write_user_status.html file. input user details(user name, user grade) to make a new user, and click save button.
+	
 	1. click save : jump to **add_user**
+	
 	2. click back : return to **index**
+
 
 + delete_user
 
