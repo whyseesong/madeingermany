@@ -40,13 +40,13 @@ $ python manage.py runserver
 
 ###Functions
 + index
-#####load mainpage/index.html file and show user details. you can see user lists of name and user grade.
+######load mainpage/index.html file and show user details. you can see user lists of name and user grade.
 	+ click user name : jump to **user_detail**
 	+ click new user : jump to **write_user**
 	+ click delete user : jump to **delete_user**
 
 + user_detail
-#####load mainpage/user_detail.html file. this page shows you user details(user name, user grade), and details of devices which current user have. device details include device name, ip address, is attestated, and attestated time.
+######load mainpage/user_detail.html file. this page shows you user details(user name, user grade), and details of devices which current user have. device details include device name, ip address, is attestated, and attestated time.
 	+ click new device : jump to **write_device**
 	+ click delete device : jump to **delete_device**	
 	+ click modify user : jump to **modify_data**	
@@ -54,17 +54,17 @@ $ python manage.py runserver
 	+ click back : return to **index**
 
 + write_device
-#####asdfasdf
+######asdfasdf
 	1. 	
 	2. 	
 	3. 
 
 + write_user
-#####load mainpage/write_user_status.html file. input user details(user name, user grade) to make a new user, and click save button.
-	1. click save : jump to **add_user**
-	2. click back : return to **index**
+######load mainpage/write_user_status.html file. input user details(user name, user grade) to make a new user, and click save button.
+	+ click save : jump to **add_user**
+	+ click back : return to **index**
 
 + delete_user
-#####load mainpage/check_delete_user.html file. this page shows you all of users and devices. check radiobox which you want to delete, and click delete button. if you delete user which have device(s), devices would be deleted though.
-	1. click delete : jump to **del_user_model**
-	2. click back : return to **index**
+######load mainpage/check_delete_user.html file. this page shows you all of users and devices. check radiobox which you want to delete, and click delete button. if you delete user which have device(s), devices would be deleted though.
+	+ click delete : jump to **del_user_model**
+	+ click back : return to **index**
