@@ -17,4 +17,7 @@ urlpatterns = [
 	url(r'^delete/user/$', views.del_user_model, name='del_user_model'),
 	url(r'^(?P<users_id>[0-9]+)/modify/$', views.modify_data, name='modify_data'),
 	url(r'^(?P<users_id>[0-9]+)/modify/save/$', views.modify_save, name='modify_save'),
+	url(r'^(?P<users_id>[0-9]+)/modify/device/check/$', views.modify_device_check, name='modify_device_check'),
+	url(r'^(?P<users_id>[0-9]+)/modify/device/$', views.modify_device_model, name='modify_device_model'),
+	url(r'^(?P<users_id>[0-9]+)/modify/device/save/$', views.modify_device_save, name='modify_device_save'),
 	]

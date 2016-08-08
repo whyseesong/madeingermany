@@ -170,3 +170,47 @@ def modify_save(request, users_id):
 	}
 	return HttpResponse(template.render(context, request))
 	
+def modify_device_check(request, users_id):
+	devices_list = Devices.objects.filter(user=users_id)
+	template = loader.get_template('mainpage/modify_device_check.html')
+	context = {
+		'devices_list' : devices_list,
+		'userinput' : Users.objects.get(id=users_id),
+	}
+	return HttpResponse(template.render(context, request))
+
+def modify_device_model(request, users_id):
+	template = loader.get_template('mainpage/modify_device.html')
+	instance = request.POST['deldevicelist']
+	muser = Users.objects.get(id=users_id)
+	mdevices = Devices.objects.get(id=instance)
+	context = {
+		'muser' : muser,
+		'mdevices' : mdevices,
+	}
+	return HttpResponse(template.render(context, request))
+
+
+def modify_device_save(request, users_id):
+	template = loader.get_template('mainpage/modify_save.html')
+	if request.POST.has_key('devicename') == False:
+		return HttpResponse('input device name')
+	else:
+		idevname = request.POST['devicename']
+
+	if request.POST.has_key('ipaddr') == False:
+		return HttpResponse('input ip address')
+	else:
+		idevip = request.POST['ipaddr']
+
+	devid = request.POST['mdevice_id']
+
+	mdevice = Devices.objects.get(id=devid)
+
+	mdevice.device_name = idevname
+	mdevice.ip = idevip
+	mdevice.save()
+	context = {
+
+	}
+	return HttpResponse(template.render(context, request))

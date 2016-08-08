@@ -38,7 +38,10 @@
 	
 	<a class="btn btn-default" href="/mainpage/{{userinput.id}}/device/write/" role="button">new device</a>
 	<a class="btn btn-default" href="/mainpage/{{userinput.id}}/delete/device_check" role="button">delete device</a>
-	<a class="btn btn-default" href="/mainpage/{{userinput.id}}/modify/" role="button">user modify</a>
+	<a class="btn btn-default" href="/mainpage/{{userinput.id}}/modify/" role="button">modify user</a>
+	{% if devices_list %}
+		<a class="btn btn-default" href="/mainpage/{{userinput.id}}/modify/device/check" role="button">modify device</a>
+	{% endif %}
 	<a class="btn btn-default" href="/mainpage/" role="button">back</a>
 	
 	</div>
