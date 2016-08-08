@@ -38,6 +38,24 @@ $ python manage.py runserver
 	+ is_attestated
 	+ attestated_time
 
+###Views.py structure
++ index
+	+ user_detail
+		+ write_device
+			+ add_device
+		+ delete_device
+			+ del_device_model
+		+ modify_data
+			+ modify_save
+		+ modify_device_check
+			+ modify_device_model
+				+ modify_device_save
+			+ device_attestation
+	+ write_user
+		+ add_user
+	+ delete_user
+		+ del_user_model
+
 ###Functions
 + index
 ######load mainpage/index.html file and show user details. you can see user lists of name and user grade.
