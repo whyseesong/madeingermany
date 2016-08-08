@@ -21,6 +21,6 @@ MadeInGermany
 1. Download these files in whatever you want.
 2. Move your current directory to downloaded folder
 3. excute terminal and use code below:
-	python manage.py runserver
+"'python manage.py runserver'"
 4. Then the server will start on local
 5. home address is **127.0.0.1:8080/mainpage/**
