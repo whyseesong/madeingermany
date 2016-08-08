@@ -20,4 +20,5 @@ urlpatterns = [
 	url(r'^(?P<users_id>[0-9]+)/modify/device/check/$', views.modify_device_check, name='modify_device_check'),
 	url(r'^(?P<users_id>[0-9]+)/modify/device/$', views.modify_device_model, name='modify_device_model'),
 	url(r'^(?P<users_id>[0-9]+)/modify/device/save/$', views.modify_device_save, name='modify_device_save'),
+	url(r'^(?P<users_id>[0-9]+)/device/attestation/$', views.device_attestation, name='device_attestation'),
 	]
