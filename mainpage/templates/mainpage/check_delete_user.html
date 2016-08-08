@@ -1,0 +1,54 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body style='margin-top:50px'>
+<div class="row">
+  	<div class="col-md-2"></div>
+  	<div class="col-md-8">
+	<h3> user delete page </h3>
+	<h4>	current user list </h4>
+	{% if userlist %}
+	<table class="table">
+	<tr class="active"><td></td> <td>User ID</td><td>User Name</td><td>User Grade</td><td>Device Name</td><td>Device IP</td></tr>
+	<form method="post" action="/mainpage/delete/user/">{% csrf_token %}
+		{% for usr in userlist %}	
+		<tr>
+		<label>
+		<td><input type='radio' name='deluserlist' value="{{usr.id}}"/></td>
+		<input type="hidden" name="usr_id" id='usr_id' value="{{usr.id}}"/>
+		<td>{{usr.id}}</td>
+		<td>{{usr.user_name}}</td>
+		<td>{{usr.grade}} </td>
+		<td>-</td>
+		<td>-</td>
+		{% if devicelist %}
+			{% for dvc in devicelist %}
+				{% if dvc.user == usr %}
+					<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>{{dvc.device_name}}</td>
+					<td>{{dvc.ip}}</td>
+					</tr>
+				{% endif %}			
+			{%endfor%}
+		{% endif %}
+		</label>	
+		</tr>
+		{% endfor %}
+		
+	</table>	
+	<input type="submit" class="btn btn-default" value="delete" />
+	</form>
+	{% else %}
+		<p> no user </p>
+	{% endif %}
+	
+	<a class="btn btn-default" href="/mainpage/" role="button">back</a>
+	</h5>
+	</div>
+	<div class="col-md-2"></div>
+</body>

@@ -1,0 +1,47 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+
+<body style='margin-top:50px'>
+<div class="row">
+  	<div class="col-md-2"></div>
+  	<div class="col-md-8">
+	<h3> {{userinput.user_name}} 's detail page</h3>
+	<h4> User Detail </h4>
+	<table class="table">
+	<tr class="active"><td>User Name</td><td>Grade</td></tr>
+	<tr><td>{{userinput.user_name}}</td><td>{{userinput.grade}}</td></tr>
+	</table>
+	
+	{% if devices_list %}
+	<h4> Device list </h4>
+	<table class="table">
+	<tr class="active"><td>Device Name</td><td>IP Address</td><td>Is Attestated</td><td>Attestated Time</td></tr>
+		<ul>
+		{% for device in devices_list %}
+		<tr>
+			
+			<td>{{device.device_name}}</td>
+			<td>{{device.ip}}</td>
+			<td>{{device.is_attestated}}</td>
+			<td>{{device.attestated_time}}</td>
+			
+		</tr>
+		{% endfor %}
+		</ul>
+	</table>
+	{% else %}
+		<p> no devices </p>
+	{% endif %}
+	
+	
+	<a class="btn btn-default" href="/mainpage/{{userinput.id}}/device/write/" role="button">new device</a>
+	<a class="btn btn-default" href="/mainpage/{{userinput.id}}/delete/device_check" role="button">delete device</a>
+	<a class="btn btn-default" href="/mainpage/{{userinput.id}}/modify/" role="button">user modify</a>
+	<a class="btn btn-default" href="/mainpage/" role="button">back</a>
+	
+	</div>
+	<div class="col-md-2"></div>
+</div>
+</body>

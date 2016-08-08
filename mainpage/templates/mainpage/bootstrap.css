@@ -1,0 +1,45 @@
+body {
+        padding-top: 50px;
+        background-color: black;
+}
+
+
+@gray-darker:  lighten(#000, 13.5%); // #222
+@gray-dark:    lighten(#000, 20%);   // #333
+@gray:         lighten(#000, 33.5%); // #555
+@gray-light:   lighten(#000, 46.7%); // #777
+@gray-lighter: lighten(#000, 93.5%); // #eee
+
+@brand-primary: darken(#428bca, 6.5%); // #337ab7
+@brand-success: #5cb85c;
+@brand-info:    #5bc0de;
+@brand-warning: #f0ad4e;
+@brand-danger:  #d9534f;
+
+
+@link-color:       @gray-dark;
+@link-hover-color: darken(@link-color, 15%);
+
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+
+.masthead {
+  background-color: @brand-primary;
+}
+
+
+@alert-message-background: @brand-info;
+.alert {
+  background-color: @alert-message-background;
+}
+
+
