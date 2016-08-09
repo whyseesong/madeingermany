@@ -2,15 +2,22 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<h5>new device saving status</h5>
+<body style='margin-top:50px'>
+<div class="row">
+  	<div class="col-md-2"></div>
+  	<div class="col-md-8">
+		<h5>new device saving status</h5>
 
-<ul>
-Device user : {{inputdevice.user}}</br>
-device name : {{inputdevice.device_name}}</br>
-IP address : {{inputdevice.ip}}</br>
-Is attestated : {{inputdevice.is_attestated}}</br>
-Attestated Time : {{inputdevice.attestated_time}}</br>
+		<ul>
+		Device user : {{inputdevice.user}}</br>
+		device name : {{inputdevice.device_name}}</br>
+		IP address : {{inputdevice.ip}}</br>
+		Is attestated : {{inputdevice.is_attestated}}</br>
+		Attestated Time : {{inputdevice.attestated_time}}</br>
 
-</ul>
+		</ul>
 
-<a href="/mainpage/">back</a>
+		<a href="/mainpage/">back</a>
+	</div>
+	<div class="col-md-2"></div>
+</body>
