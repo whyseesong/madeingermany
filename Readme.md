@@ -56,24 +56,24 @@ $ python manage.py runserver
 	+ delete_user
 		+ del_user_model
 
-###Functions
-#####this document follows the structure mentioned at Views.py structure before.
+### Functions
+##### this document follows the structure mentioned at Views.py structure before.
 + index
-######load mainpage/index.html file and show user details. you can see user lists of name and user grade.
+###### load mainpage/index.html file and show user details. you can see user lists of name and user grade.
 	+ click user name : jump to **user_detail**
 	+ click new user : jump to **write_user**
 	+ click delete user : jump to **delete_user**
 
->>+ user_detail
->>######load mainpage/user_detail.html file. this page shows you user details(user name, user grade), and details of devices which current user have. device details include device name, ip address, is attestated, and attestated time.
-	>>+ click new device : jump to **write_device**
-	>>+ click delete device : jump to **delete_device**	
-	>>+ click modify user : jump to **modify_data**	
-	>>+ click modify device(*if device exists*) : jump to modify_device_check	
-	>>+ click back : return to **index**
++ user_detail
+###### load mainpage/user_detail.html file. this page shows you user details(user name, user grade), and details of devices which current user have. device details include device name, ip address, is attestated, and attestated time.
+	+ click new device : jump to **write_device**
+	+ click delete device : jump to **delete_device**	
+	+ click modify user : jump to **modify_data**	
+	+ click modify device(*if device exists*) : jump to modify_device_check	
+	+ click back : return to **index**
 
->>>+ write_device
->>>######load mainpage/write_device.html file. you can enter attributes of new device : device name and ip address. 
++ write_device
+###### load mainpage/write_device.html file. you can enter attributes of new device : device name and ip address. 
 	>>>+ click save : jump to **add_device**
 	>>>+ click back : return to **index**
 
