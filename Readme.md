@@ -58,11 +58,11 @@ $ python manage.py runserver
 
 ###Functions
 #####this document follows the structure mentioned at Views.py structure before.
->+ index
->######load mainpage/index.html file and show user details. you can see user lists of name and user grade.
-	>+ click user name : jump to **user_detail**
-	>+ click new user : jump to **write_user**
-	>+ click delete user : jump to **delete_user**
++ index
+######load mainpage/index.html file and show user details. you can see user lists of name and user grade.
+	+ click user name : jump to **user_detail**
+	+ click new user : jump to **write_user**
+	+ click delete user : jump to **delete_user**
 
 >>+ user_detail
 >>######load mainpage/user_detail.html file. this page shows you user details(user name, user grade), and details of devices which current user have. device details include device name, ip address, is attestated, and attestated time.
