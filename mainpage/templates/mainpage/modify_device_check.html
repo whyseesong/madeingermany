@@ -10,24 +10,23 @@
 	{% if devices_list %}
 	<table class="table">
 	<tr><td></td><td>Device Name</td><td>IP Address</td><td>Is Attestated</td><td>Attestated Time</td></tr>
-	<form method="post" name='attestation' action="/mainpage/{{userinput.id}}/device/attestation/">{% csrf_token %}
-		<form method="post" name='select' action="/mainpage/{{userinput.id}}/modify/device/">{% csrf_token %}
-		{% for device in devices_list %}	
-			<tr>
-			<label>
-				<td><input type='radio' name='deldevicelist' value="{{device.id}}"/></td>
-				<input type="hidden" name="deldevice_id" id='deldevice_id' value="{{device.id}}"/>
-				<td>{{device.device_name}}</td>
-				<td>{{device.ip}}</td>
-				<td>{{device.is_attestated}}</td>
-				<td>{{device.attestated_time}}</td>
-			</label>	
-			</tr>	
-		{% endfor %}
-		</table>
-		<input type="submit" class="btn btn-default" value="modify detail" />
-	<input type="submit" class="btn btn-default" value="attestation" />
-	</form>
+	
+	<form method="post" name='select' action="/mainpage/{{userinput.id}}/modify/device/">{% csrf_token %}
+	{% for device in devices_list %}	
+		<tr>
+		<label>
+			<td><input type='radio' name='deldevicelist' value="{{device.id}}"/></td>
+			<input type="hidden" name="deldevice_id" id='deldevice_id' value="{{device.id}}"/>
+			<td>{{device.device_name}}</td>
+			<td>{{device.ip}}</td>
+			<td>{{device.is_attestated}}</td>
+			<td>{{device.attestated_time}}</td>
+		</label>	
+		</tr>	
+	{% endfor %}
+	</table>
+	<input type="submit" class="btn btn-default" value="modify detail" /></form>
+	
 	{% else %}
 		<p> no devices </p>
 	{% endif %}

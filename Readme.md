@@ -40,8 +40,8 @@ $ python manage.py runserver
 		+ modify device (check device to modify)
 			+ modify device detail (input information about device to modify)
 				+ print modification status (print device modification completion message)
-			+ device attestation (change isattestated value)
-				+ print attestation status (print value modification completion message)
+				+ device attestation (change isattestated value)
+					+ print attestation status (print value modification completion message)
 	+ new user (input information about new user)
 		+ print saving status (print user save completion message))
 	+ delete user (check user to delete)
@@ -59,7 +59,7 @@ $ python manage.py runserver
 		+ modify_device_check
 			+ modify_device_model
 				+ modify_device_save
-			+ device_attestation
+				+ device_attestation
 	+ write_user
 		+ add_user
 	+ delete_user
@@ -96,44 +96,61 @@ $ python manage.py runserver
 	+ click save : jump to **add_device**
 	+ click back : return to **index**
 
-+ add_device
++ #### add_device
 ###### get some values(device name and ip address) from **write_device** and *manage/write_device.html* file with POST method. other values(is attestated and attestated time) are given with default value. the default value of 'is attestation' is False, and 'attestated time' is current saving time. with these values, function makes a new devices class and save to the database. then load *mainpage/wrtie_device_status.html* file. if save successes, device informations are printed on the page.
 	+ click back : return to **index**
 
-+ delete_device
++ #### delete_device
 ###### load *mainpage/check_delete_device.html* file. with this file, page shows table of device list property of current user. the table has attributes consists of device name, ip address, is attestated and attestated time and checkbox to select be deleted. you can click checkbox and delete button to delete device which you want.
 	+ click delete : jump to **del_device_model**
 	+ click back : return to **index**
 
-+ del_device_model
++ #### del_device_model
 ###### get id of device which you selected at **delete_device** function with *mainpage/check_delete_device.html* file. then find the device with id, and delete it from database. after deleting, load *mainpage/delete_device.html* file and print completion message.
 	+ click back : return to **index**
 
-+ modify_data
-###### when you click modify user button at user detail with *mainpage/user_detail.html* file, this function is called. it loads *mainpage/modify_data.html* file, which allows you input user's new data. you can modify user's data(user name or grade) as input data and click save button.
++ #### modify_data
+###### when you click modify user button at **user detail** function with *mainpage/user_detail.html* file, this function is called. it loads *mainpage/modify_data.html* file, which allows you input user's new data. you can modify user's data(user name or grade) as input data and click save button.
 	+ click save : jump to **modify_save**
 	+ click back : return to **index**
 
-+ modify_save
++ #### modify_save
+###### get attributes about user from **modify_data** function with *mainpage/modify_data.html* file and save modified details of users at database. then loads *mainpage/modify_save.html* file to print user modification completion message.
+	+ click back : return to **index**
 
-+ modify_device_check
++ #### modify_device_check
+###### load *mainpage/modify_device_check.html* file to print detail device informations about current user. check radiobox to modify device.
+	+ click modify detail : jump to **modify_device_model**
+	+ click back : return to **index**
 
-+ modify_device_model
++ #### modify_device_model
+###### asdfasdfasdfasdfasdfasdf
+	+ click save : jump to **modify_device_save**
+	+ click attestation : jump to **device_attestation**
+	+ click back : return to **index**
 
-+ modify_device_save
++ #### modify_device_save
+###### asdfasdfasdfasdfasdfasdf
+	+ click back : return to **index**
 
-+ device_attestation
++ #### device_attestation
+###### asdfasdfasdfasdfasdfasdf
+	+ click back : return to **index**
 
-+ write_user
++ #### write_user
 ###### load mainpage/write_user_status.html file. input user details(user name, user grade) to make a new user, and click save button.
 	+ click save : jump to **add_user**
 	+ click back : return to **index**
 
-+ add_user
++ #### add_user
+###### asdfasdfasdfasdfasdfasdfasdf
+	+ click back : return to **index**
 
-+ delete_user
++ #### delete_user
 ###### load mainpage/check_delete_user.html file. this page shows you all of users and devices. check radiobox which you want to delete, and click delete button. if you delete user which have device(s), devices would be deleted though.
 	+ click delete : jump to **del_user_model**
 	+ click back : return to **index**
 
-+ del_user_model
++ #### del_user_model
+###### asdfasdfasdfasdfasdfasdasdfads
+	+ click back : return to **index**

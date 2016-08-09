@@ -18,13 +18,23 @@
 		<div class="form-group">
 			<label for="ipaddr">IP Address</label><input type="string" class="form-control" id="ipaddr" name="ipaddr" value="{{mdevices.ip}}" />
 		</div>
-
-
-
+		<div class="form-group">
+		    <label >Is Attestated</label>
+			<input class="form-control" id="disabledInput" type="text" placeholder="{{mdevices.is_attestated}}" disabled>
+		</div>		
+		<div class="form-group">
+		    <label >Attestated Time</label>
+		     <input class="form-control" id="disabledInput" type="text" placeholder="{{mdevices.attestated_time}}" disabled>
+		</div>	
 		</br>
 		<input type="submit" class="btn btn-default" value="save" />
-		<a class="btn btn-default" href="/mainpage/" role="button">back</a>
 	</form>
+	<form method="post" action="/mainpage/{{muser.id}}/device/attestation/">{% csrf_token %}
+		<input type="hidden" name="mdevice_id" id='mdevice_id' value="{{mdevices.id}}"/>
+		<input type="submit" class="btn btn-default" value="attestation" />
+	</form>
+		<a class="btn btn-default" href="/mainpage/" role="button">back</a>
+	
 
 	</div>
 	<div class="col-md-2"></div>

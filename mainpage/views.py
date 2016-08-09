@@ -217,7 +217,7 @@ def modify_device_save(request, users_id):
 
 def device_attestation(request, users_id):
 	template = loader.get_template('mainpage/modify_save.html')
-	devid = request.POST['deldevicelist']
+	devid = request.POST['mdevice_id']
 	mdevice = Devices.objects.get(id=devid)
 	if mdevice.is_attestated == False:
 		mdevice.is_attestated=True
